@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
 	def edit
 		@post = Post.find(params[:id])
+		@post.update(params.require(:post).permit(:title, :descript
 	end
 
 	def update
